@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters {
+  string 'api_type'
+  choice choices: ['dev '], name: 'environment'
+}
     stages {
         stage('Create Stack') {
             steps {
