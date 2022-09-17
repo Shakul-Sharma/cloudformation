@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    environment {
-  enviroment = "dev, qa , prod"
+    parameters {
+  choice choices: ['dev'], name: 'enviroment '
 }
     stages {
         stage('Create Stack') {
