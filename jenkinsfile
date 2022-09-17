@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    environment {
-  enviroment  = "qa , dev , prod , dev"
+    parameters {
+  choice choices: ['qa , dev , stg , prod '], name: 'enviroment '
 }
 
     stages {
