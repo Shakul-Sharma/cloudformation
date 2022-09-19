@@ -2,6 +2,7 @@ pipeline {
     agent any
     parameters {
   choice choices: ['qa' , 'dev' , 'stg' , 'prod'], name: 'enviroment '
+  string 'repo_tag'
   
 }
 
